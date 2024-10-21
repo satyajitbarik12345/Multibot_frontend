@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Albums</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">User Albums</h2>
+    <div id="albums" class="albums"></div>
+    <script src="script.js"></script>
+    <script>
+      // Get the userId from URL query parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const userId = urlParams.get("userId");
+
+      if (userId) {
+        showUserAlbums(userId);
+      }
+    </script>
+  </body>
+</html>
